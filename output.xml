@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170411 08:41:51.393" generator="Robot 3.0.2 (Python 2.7.6 on linux2)">
+<suite source="/home/rfsilva/PycharmProjects/test_alura/tests/ui/main.robot" id="s1" name="Main">
+<test id="s1-t1" name="Access to the search field">
+<kw name="Open Browser Site" library="browser">
+<arguments>
+<arg>https://www.alura.com.br/</arg>
+<arg>firefox</arg>
+</arguments>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${URL_SITE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170411 08:41:52.035" level="INFO">Opening browser 'firefox' to base url 'https://www.alura.com.br/'</msg>
+<status status="PASS" endtime="20170411 08:42:23.274" starttime="20170411 08:41:52.035"></status>
+</kw>
+<status status="PASS" endtime="20170411 08:42:23.274" starttime="20170411 08:41:52.035"></status>
+</kw>
+<kw name="Check if it exists the header bar search in page" library="search">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>${wait_time}</arg>
+<arg>${retry_interval}</arg>
+<arg>page should contain element</arg>
+<arg>${SEARCH_BAR}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>${SEARCH_BAR}</arg>
+</arguments>
+<msg timestamp="20170411 08:42:23.282" level="INFO">Current page contains element 'xpath=//*[@class="header-barraBusca"]'.</msg>
+<status status="PASS" endtime="20170411 08:42:23.282" starttime="20170411 08:42:23.276"></status>
+</kw>
+<status status="PASS" endtime="20170411 08:42:23.283" starttime="20170411 08:42:23.275"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>${wait_time}</arg>
+<arg>${retry_interval}</arg>
+<arg>element should be visible</arg>
+<arg>${SEARCH_BAR}</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_BAR}</arg>
+</arguments>
+<msg timestamp="20170411 08:42:23.283" level="INFO">Verifying element 'xpath=//*[@class="header-barraBusca"]' is visible.</msg>
+<status status="PASS" endtime="20170411 08:42:23.301" starttime="20170411 08:42:23.283"></status>
+</kw>
+<status status="PASS" endtime="20170411 08:42:23.301" starttime="20170411 08:42:23.283"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20170411 08:42:25.301" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20170411 08:42:25.302" starttime="20170411 08:42:23.301"></status>
+</kw>
+<status status="PASS" endtime="20170411 08:42:25.302" starttime="20170411 08:42:23.275"></status>
+</kw>
+<kw name="Show search bar" library="search">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>${wait_time}</arg>
+<arg>${retry_interval}</arg>
+<arg>Element Should Be Visible</arg>
+<arg>${element}</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by `locator` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20170411 08:42:25.304" level="INFO">Verifying element 'xpath=//*[@class="header-busca"]' is visible.</msg>
+<status status="PASS" endtime="20170411 08:42:25.327" starttime="20170411 08:42:25.303"></status>
+</kw>
+<status status="PASS" endtime="20170411 08:42:25.327" starttime="20170411 08:42:25.303"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20170411 08:42:25.328" level="INFO">Clicking element 'xpath=//*[@class="header-busca"]'.</msg>
+<status status="PASS" endtime="20170411 08:42:25.370" starttime="20170411 08:42:25.327"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20170411 08:42:27.371" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20170411 08:42:27.371" starttime="20170411 08:42:25.371"></status>
+</kw>
+<status status="PASS" endtime="20170411 08:42:27.371" starttime="20170411 08:42:25.302"></status>
+</kw>
+<kw name="Input text in field for search" library="search">
+<arguments>
+<arg>JAVA</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>${wait_time}</arg>
+<arg>${retry_interval}</arg>
+<arg>Element Should Be Visible</arg>
+<arg>${element}</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by `locator` is visible.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20170411 08:42:27.373" level="INFO">Verifying element 'xpath=//*[@id="header-barraBusca-campoBusca"]' is visible.</msg>
+<status status="PASS" endtime="20170411 08:42:27.387" starttime="20170411 08:42:27.373"></status>
+</kw>
+<status status="PASS" endtime="20170411 08:42:27.387" starttime="20170411 08:42:27.372"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20170411 08:42:27.387" level="INFO">Clicking element 'xpath=//*[@id="header-barraBusca-campoBusca"]'.</msg>
+<status status="PASS" endtime="20170411 08:42:27.405" starttime="20170411 08:42:27.387"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20170411 08:42:29.405" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20170411 08:42:29.406" starttime="20170411 08:42:27.405"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${FIELD_SEARCH}</arg>
+<arg>${term}</arg>
+</arguments>
+<msg timestamp="20170411 08:42:29.406" level="INFO">Typing text 'JAVA' into text field 'xpath=//*[@id="header-barraBusca-campoBusca"]'</msg>
+<status status="PASS" endtime="20170411 08:42:29.437" starttime="20170411 08:42:29.406"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20170411 08:42:31.437" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20170411 08:42:31.438" starttime="20170411 08:42:29.437"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${BUTTON_SEARCH}</arg>
+</arguments>
+<msg timestamp="20170411 08:42:31.438" level="INFO">Clicking element 'xpath=//*[@class="header-barraBusca-submit"]'.</msg>
+<status status="PASS" endtime="20170411 08:42:31.470" starttime="20170411 08:42:31.438"></status>
+</kw>
+<status status="PASS" endtime="20170411 08:42:31.470" starttime="20170411 08:42:27.372"></status>
+</kw>
+<kw type="teardown" name="Run Keyword If Test Failed" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<arguments>
+<arg>set test message</arg>
+<arg>Test failed! Error access search bar</arg>
+</arguments>
+<status status="PASS" endtime="20170411 08:42:31.470" starttime="20170411 08:42:31.470"></status>
+</kw>
+<tags>
+<tag>search_field</tag>
+</tags>
+<status status="PASS" endtime="20170411 08:42:31.470" critical="yes" starttime="20170411 08:41:52.034"></status>
+</test>
+<doc>Studyng selenium e robot with the Alura site</doc>
+<status status="PASS" endtime="20170411 08:42:31.471" starttime="20170411 08:41:51.394"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="1">search_field</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Main" pass="1">Main</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
